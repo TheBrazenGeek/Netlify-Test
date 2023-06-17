@@ -1,0 +1,620 @@
+:root {
+
+    --bg-color: hsl(207, 100%, 4%);
+    --bg-gradient: linear-gradient(135deg, hsl(207, 50%, 18%) 0%, hsl(207, 100%, 4%) 100%);
+
+    --avatar: hsl(207, 100%, 18%);
+
+    --career: hsl(173, 100%, 29%);
+    --career-contrast: #ffffff;
+
+    --personal: hsl(186, 100%, 38%);
+    --personal-contrast: #ffffff;
+
+    --footer: #EEEEEE;
+    --content: hsl(186, 30%, 80%);
+
+
+    --bar-bg: hsl(207, 100%, 4%);
+    --bar-height: 96px;
+
+
+}
+
+
+
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    padding: 30px 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+section a.jump  {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: var(--footer);
+    text-align: center;
+    margin-bottom: 5vh;
+    left: 0;
+}
+
+section h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--content);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+section.profile {
+    padding: 50px 30px;
+}
+
+section.profile div.headline {
+    display: flex;
+}
+
+section.profile a.avatar {
+    display: block;
+    margin-right: 50px;
+    position: relative;
+}
+
+section.profile img.avatar {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    filter: grayscale(100%);
+    opacity: 0.75;
+}
+
+section.profile a.avatar:before {
+    content: " ";
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--avatar);
+}
+
+section.profile img.avatar:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+section.profile header {
+    display: block;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: 0;
+    text-transform: uppercase;
+    background: linear-gradient(225deg,
+        var(--content) 0%, var(--content) 19%,
+        transparent 19%,transparent 20%,
+        var(--career) 20%, var(--personal)  39%,
+        transparent 39%,transparent 40%,
+        #FFFFFF 40%,#FFFFFF 59% ,
+        transparent 59%,transparent 60%,
+        var(--personal) 60%, var(--career) 79%,
+        transparent 79%, transparent 80%,
+        var(--content) 80%, var(--content)  100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section.profile h1 {
+    width: 100%;
+    line-height: 1.4;
+    padding: 15px 0 0 0;
+    margin: 0;
+    font-size: 36px;
+    font-family: "Exo", sans-serif;
+    font-weight: 900;
+}
+
+section.profile h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: var(--content);
+    background: none;
+}
+
+section.profile p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--content);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 400;
+    padding: 15px 0 0 0;
+    margin: 0;
+    text-align: justify;
+}
+
+section.mottos div {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--content);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 15px 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.mottos div span {
+    display: block;
+    white-space: nowrap;
+    flex: 1 1 25%;
+    margin-bottom: 1.5em;
+}
+
+section.mottos div span.left {
+    text-align: left;
+}
+
+section.mottos div span.center {
+    text-align: center;
+}
+
+section.mottos div span.right {
+    font-size: 16px;
+    color: var(--content);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: right;
+}
+
+section.profile div.icons {
+    display: inline-block;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+section.profile div.icons span {
+    margin: 0;
+    padding: 50px 0 0 0;
+}
+
+section.profile div.icons span + span {
+    padding: 25px 0 0 0;
+}
+
+section.profile div.icons span a {
+    margin-left: 16px;
+    margin-right: 16px;
+    white-space: nowrap;
+    line-height: 1.5;
+    opacity: 1;
+}
+
+section.profile div.icons span a:hover {
+    opacity: 0.75;
+}
+
+section.profile div.icons span a.career {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--career);
+}
+
+section.profile div.icons span a.personal {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--personal);
+}
+
+section.links ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+}
+
+section.links ul li {
+    display: block;
+    margin: 10px 0;
+    flex: 0 1 calc(33.33% - 10px);
+}
+
+section.links ul li a {
+    display: block;
+    opacity: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+
+section.links ul li a.career {
+    background: var(--career);
+    color: var(--career-contrast);
+}
+
+section.links ul li a.personal {
+    background: var(--personal);
+    color: var(--personal-contrast);
+}
+
+section.links a:hover {
+    opacity: 0.75;
+}
+
+section.bio p {
+    font-size: 16px;
+    color: var(--content);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 1em 0 0 0;
+    padding: 0;
+    text-align: justify;
+}
+
+section.timeline .timeline {
+    margin: 1em 0 0 0;
+    overflow-x: auto;
+    background: #0003;
+}
+
+section.timeline .timeline * {
+    font-size: 16px;
+    color: var(--content);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    padding: 0;
+}
+
+section.timeline .timeline .inner {
+    width: 100%;
+    position: relative;
+/*    overflow-x: hidden; */
+}
+
+section.timeline .timeline .line {
+    width: 10px;
+    left: calc(50% - 5px);
+    background: #0009;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+section.timeline .timeline .event {
+    width: 50%;
+    position: absolute;
+    overflow: hidden;
+}
+section.timeline .timeline .event:hover {
+    position: absolute;
+    overflow: visible;
+}
+
+section.timeline .timeline .event:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    z-index: 5;
+}
+
+section.timeline .timeline .event .details {
+    width: 30px	;
+    border-radius: 15px;
+    height: 30px;
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+section.timeline .timeline .event:hover .details {
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+section.timeline .timeline .event.left .details {
+    right: -15px;
+    top: calc(50% - 15px);
+    border-radius: 15px 0 0 15px;
+}
+
+section.timeline .timeline .event.right .details {
+    left: -15px;
+    top: calc(50% - 15px);
+    border-radius: 0 15px 15px 0;
+}
+
+section.timeline .timeline .event.left:hover {
+    width: calc(50% - 7px);
+    right: calc(50% + 15px);
+}
+
+section.timeline .timeline .event.left:hover .details {
+    top: 0;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+section.timeline .timeline .event.right:hover {
+    width: calc(50% - 7px);
+}
+
+section.timeline .timeline .event.right:hover .details {
+    left: 1px;
+    top: 0;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+
+}
+
+section.timeline .timeline .event .details span {
+    display: none;
+}
+
+section.timeline .timeline .event:hover .details span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+section.timeline .timeline .event:hover .details span h1 {
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+}
+section.timeline .timeline .event:hover .details span h2 {
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+section.timeline .timeline .event:hover .details span p.dates {
+    margin: 0;
+    text-align: center;
+}
+section.timeline .timeline .event:hover .details span p {
+    margin: 10px 0 0 0;
+}
+
+section.timeline .timeline .event.left {
+    right: 50%
+}
+section.timeline .timeline .event.left:after {
+    right: 0%
+}
+
+section.timeline .timeline .event.right {
+    left: 50%
+}
+section.timeline .timeline .event.right:after {
+    left: 0%
+}
+
+
+section.timeline .timeline .event.project:after,
+section.timeline .timeline .event.project .details {
+    background: var(--avatar);
+}
+
+section.timeline .timeline .event.study:after,
+section.timeline .timeline .event.study .details {
+    background: var(--personal);
+}
+
+section.timeline .timeline .event.employment:after,
+section.timeline .timeline .event.employment .details {
+    background: var(--career);
+}
+section.timeline .timeline .event:hover .details {
+    border: 5px solid #0003;
+}
+
+
+footer {
+    padding: 100px 30px 1em 30px ;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+footer > * {
+    font-size: 12px;
+    color: var(--footer);
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    border-bottom: 1px solid var(--personal);
+    color: var(--personal);
+}
+
+footer a:hover {
+    border-bottom: 1px solid var(--career);
+    color: var(--career);
+}
+
+a {
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--career);
+}
+
+a:hover {
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 100%;
+        max-width: 820px;
+        position: relative;
+        padding: 30px 30px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    section a.jump {
+        display: block;
+    }
+
+    section.profile {
+        height: 100vh;
+        min-height: 90vh;
+        max-height: -webkit-fill-available;
+    }
+
+    section.profile header {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .followup { display: none; }
+
+    section.profile a.avatar {
+        display: block;
+        width: 100%;
+    }
+
+    section.profile a.avatar:before {
+        content: " ";
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 64px);
+        background: var(--avatar);
+        margin: 0 auto;
+    }
+
+    section.profile img.avatar {
+        width: 128px;
+        height: 128px;
+        filter: grayscale(100%);
+    }
+
+    section.profile div.headline {
+        display: block;
+    }
+
+
+    section.mottos div {
+        display: block;
+    }
+
+    section.mottos div span,
+    section.mottos div span.left,
+    section.mottos div span.right,
+    section.mottos div span.center {
+        text-align: center;
+    }
+
+
+    section.profile > div.icons span {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    section.bio p {
+        color: var(--content);
+    }
+
+    section.links {
+        height: 100vh;
+        min-height: 90vh;
+        max-height: -webkit-fill-available;
+    }
+
+    section.links ul {
+        display: block;
+    }
+
+    section.links ul li a:first-child {
+        margin-top: 0px;
+    }
+
+    section.form {
+        min-height: calc(100vh - 1.5em);
+        padding: 30px 0;
+    }
+
+    footer {
+        padding: 0 0 1em 0;
+    }
+    /*section.timeline .timeline {
+        max-height: 80vh;
+    }*/
+    section.timeline .timeline .event:hover .details span p:not(.dates) {
+	display: none;
+    }
+
+}
